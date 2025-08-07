@@ -12,10 +12,24 @@ let listaDeAmigos = []
 function agregarAmigo() {
     let amigo = document.getElementById("amigo").value;
 
-    if (amigo == "") {
+    if (amigo === "") {
         alert("Por favor, inserte un nombre");
     } else {
         listaDeAmigos.push(amigo);
     }
-    console.log(listaDeAmigos)
+    document.getElementById("amigo").value = "";
+    actualizarLista();
 }
+
+
+function actualizarLista(){
+    let lista = document.getElementById("resultado");
+    lista.innerHTML = "";
+    for (let i = 0; i < listaDeAmigos.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = listaDeAmigos[i];
+        lista.appendChild(li);
+        }
+}
+
+
