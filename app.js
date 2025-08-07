@@ -7,16 +7,15 @@
   - Sorteo aleatorio: Al hacer clic en el botón "Sortear Amigo", se seleccionará aleatoriamente un nombre de la lista y se mostrará en la página.
 */
 
-let ListaAmigos = []
+let listaDeAmigos = []
 
-function AgregarAmigos() {
-    let amigo = document.getElementById("amigo");
+function agregarAmigo() {
+    let amigo = document.getElementById("amigo").value;
 
     if (amigo == "") {
         alert("Por favor, inserte un nombre");
     } else {
-        ListaAmigos.push(amigo);
+        listaDeAmigos.push(amigo);
     }
+    console.log(listaDeAmigos)
 }
-
-console.log(ListaAmigos)
