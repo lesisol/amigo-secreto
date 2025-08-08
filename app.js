@@ -42,8 +42,14 @@ function sortearAmigo() {
     resultadoLista.innerHTML = ""
 
     let elemento = document.createElement("li");
-    elemento.textContent = listaDeAmigos[numeroRandom];
-    resultadoLista.appendChild(elemento);
+    
+    if (listaDeAmigos.length == 0) {
+        alert("Por favor, añada amigos primero")
+    } else {
+        elemento.textContent = listaDeAmigos[numeroRandom];
+        resultadoLista.appendChild(elemento);
+    }
     return;
 }
+
 
