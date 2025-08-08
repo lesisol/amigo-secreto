@@ -19,17 +19,19 @@ function agregarAmigo() {
     }
     document.getElementById("amigo").value = "";
     actualizarLista();
+    return;
 }
 
 
 function actualizarLista(){
-    let lista = document.getElementById("resultado");
+    let lista = document.getElementById("listaAmigos");
     lista.innerHTML = "";
-    for (let i = 0; i < listaDeAmigos.length; i++) {
-        let li = document.createElement("li");
-        li.textContent = listaDeAmigos[i];
-        lista.appendChild(li);
+    for (let i = 0; i < listaDeAmigos.length; i++) {   // Variable contador, condicion, incremento
+        let elemento = document.createElement("li");
+        elemento.textContent = listaDeAmigos[i];
+        lista.appendChild(elemento);
         }
+    return;
 }
 
 
