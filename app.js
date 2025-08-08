@@ -9,6 +9,7 @@
 
 let listaDeAmigos = []
 
+
 function agregarAmigo() {
     let amigo = document.getElementById("amigo").value;
 
@@ -30,8 +31,19 @@ function actualizarLista(){
         let elemento = document.createElement("li");
         elemento.textContent = listaDeAmigos[i];
         lista.appendChild(elemento);
-        }
+    }
     return;
 }
 
+
+function sortearAmigo() {
+    let numeroRandom = Math.floor(Math.random() * listaDeAmigos.length);
+    let resultadoLista = document.getElementById("resultado");
+    resultadoLista.innerHTML = ""
+
+    let elemento = document.createElement("li");
+    elemento.textContent = listaDeAmigos[numeroRandom];
+    resultadoLista.appendChild(elemento);
+    return;
+}
 
